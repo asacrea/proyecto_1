@@ -23,5 +23,10 @@ test:
   database: mydatabase
 
 production:
-  <<: *default
-  database: mydatabase
+  adapter: mysql2
+  username: b7b0e8356a0f9d
+  password: a10df7f0
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: heroku_80ca0843bce279a
+  host: mysql://b7b0e8356a0f9d:a10df7f0@us-cdbr-iron-east-05.cleardb.net/heroku_80ca0843bce279a?reconnect=true
