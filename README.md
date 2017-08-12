@@ -1,9 +1,9 @@
-# rubyArticulosEM
-## By: Edwin Montoya - emontoya@eafit.edu.co
+# proyecto_1
+## By: Edwin Montoya - csanch35@eafit.edu.co
 
 # DEVELOPMENT::
 
-## 1. Creating the Article Application
+## 1. Creating the Metadata Application
 
         user1@dev$ rails new proyecto_1
 
@@ -26,12 +26,12 @@
 * edit: config/routes.rb
       # scope '/' -> run http://server:3000 (native) or http://server (inverse proxy or passenger)
       # scope '/prefix_url' -> run http://server:3000/prefix_url or http://server/prefix_url (inverse proxy or passenger).
-      # ej: http://10.131.137.183/rubyArticulos
+      # ej: http://10.131.137.183/proyecto_1
         Rails.application.routes.draw do
           scope '/' do
-            get 'welcome/index'
+            get 'static_pages/index'
             resources :articles
-            root 'welcome#index'
+            root 'static_pages#home'
           end
         end
 
@@ -94,13 +94,13 @@ followers_user GET    /users/:id/followers(.:format) users#followers
 
 * modify: app/views/micropost/new.html.erb:
 
-      <%= form_for :micropost, url: articles_path do |f| %>
+      <%= form_for :micropost, url: ausers_path do |f| %>
 
       POST method and require 'create' action.
 
-* add 'create' action to ArticlesController:
+* add 'create' action to MicropostController:
 
-        class ArticlesController < ApplicationController
+        class MicropostController < ApplicationController
           def new
           end
 
@@ -113,7 +113,7 @@ followers_user GET    /users/:id/followers(.:format) users#followers
 
       user1@dev$ rails generate model Micropost name:string ext:string size:integer picture:string
 
-* look db/migrate/YYYYMMDDHHMMSS_create_articles.rb:
+* look db/migrate/YYYYMMDDHHMMSS_create_micropost.rb:
 
       class CreateMicroposts < ActiveRecord::Migration[5.1]
         def change
@@ -249,20 +249,20 @@ run:
 		  </span>
 		</li>
 
-# 11. Listing all articles
+# 11. Listing all microposts
 
 * Route:
 
-      articles GET    /users(.:format)          users#show
+      user GET    /users(.:format)          users#show
 
-* Controller: add action in app/controllers/articles_controller.rb
+* Controller: add action in app/controllers/users_controller.rb
 
       def show
         @user = User.find(params[:id])
     	@microposts = @user.microposts.paginate(page: params[:page])
       end
 
-* View: create a new file app/views/articles/index.html.erb
+* View: create a new file app/views/users/index.html.erb
 
       <li id="micropost-<%= micropost.id %>">
 		  <%= link_to gravatar_for(micropost.user), micropost.user %>
@@ -287,33 +287,6 @@ run:
 * View: Open app/views/shared/_user_info.html.erb
 
       <span><%= link_to "view my profile", current_user %></span>
-
-* View: app/views/articles/index.html.erb
-
-      <%= link_to 'New article', new_article_path %>    
-
-* View: app/views/articles/new.html.erb
-
-
-      <%= form_for :article, url: articles_path do |f| %>
-        ...
-      <% end %>
-
-      <%= link_to 'Back', articles_path %>
-
-* View: app/views/articles/show.html.erb
-
-      <p>
-        <strong>Title:</strong>
-        <%= @article.title %>
-      </p>
-
-      <p>
-        <strong>Text:</strong>
-        <%= @article.text %>
-      </p>
-
-      <%= link_to 'Back', articles_path %>   
 
 # 13. Updating Articles     
 
@@ -402,7 +375,7 @@ run:
       <%= link_to 'Edit', edit_article_path(@article) %> |
       <%= link_to 'Back', articles_path %>
 
-# 14. delete an Article
+# 14. delete an Microposts
 
 Route:
 
@@ -416,7 +389,7 @@ Controller: app/controllers/microposts_controller.rb
 	    redirect_to request.referrer || root_url
       end                                      
 
-View: add 'delete' link to app/views/articles/index.html.erb
+View: add 'delete' link to app/views/microposts/index.html.erb
 
       ...
       < <span class="timestamp">
@@ -430,7 +403,7 @@ View: add 'delete' link to app/views/articles/index.html.erb
 
 ## DEPLOYMENT ON DCA FOR TESTING
 
-# 1. Deploy the Article Web App on Linux Centos 7.x (test)
+# 1. Deploy the Micropost Web App on Linux Centos 7.x (test)
 
 ## Install ruby and rails
 
@@ -560,7 +533,7 @@ when finish the install module, add to /etc/http/conf/httpd.conf:
 
         user1@prod$ bundle exec rake assets:precompile db:migrate RAILS_ENV=production
 
-* add articles.conf to /etc/httpd/conf.d/myapp.conf:
+* add microposts.conf to /etc/httpd/conf.d/myapp.conf:
 
         <VirtualHost *:80>
             ServerName 10.131.137.183
@@ -615,11 +588,11 @@ when finish the install module, add to /etc/http/conf/httpd.conf:
 
 * Configure /etc/nginx/nginx.conf for Inverse Proxy
 
-      App from browser: http://10.131.137.236/rubyArticulos
+      App from browser: http://10.131.137.236/proyecto_1
 
       // /etc/nginx/nginx.conf
 
-      location /rubyArticulos/ {
+      location /proyecto_1/ {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header HOST $http_host;
         proxy_set_header X-NginX-Proxy true;
@@ -627,17 +600,17 @@ when finish the install module, add to /etc/http/conf/httpd.conf:
         proxy_redirect off;
       }
 
-* MODIFY THE APPLICATION IN ORDER TO CONFIGURE THE NEW URI ('/rubyArticulos'):
+* MODIFY THE APPLICATION IN ORDER TO CONFIGURE THE NEW URI ('/proyecto_1'):
 
       // modify config/routes.rb
       # scope '/' -> run http://server:3000 (native) or http://server (inverse proxy or passenger)
       # scope '/prefix_url' -> run http://server:3000/prefix_url or http://server/prefix_url (inverse proxy or passenger).
-      # ej: http://10.131.137.236/rubyArticulos
+      # ej: http://10.131.137.183/proyecto_1
       Rails.application.routes.draw do
-        scope '/rubyArticulos' do
-          get 'welcome/index'
-          resources :articles
-          root 'welcome#index'
+        scope '/proyecto_1' do
+          get 'users/index'
+          resources :users
+          root 'home#index'
         end
       end
 
