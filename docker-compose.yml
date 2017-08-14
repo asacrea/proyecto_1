@@ -6,6 +6,7 @@ services:
       - MYSQL_ROOT_PASSWORD=Thelema77,
     logging:
       driver: 'none'
+    restart: unless-stopped
   web:
     build: .
     command: ./start_server.sh
@@ -15,3 +16,4 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    restart: unless-stopped
