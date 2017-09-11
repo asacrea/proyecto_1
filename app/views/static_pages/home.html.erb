@@ -14,6 +14,10 @@
     </aside>
     <div class="col-md-8">
       <h3>Metadata Image</h3>
+      <%= form_tag('/', :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+        <%= submit_tag "Search" %>
+      <% end %>
       <%= render 'shared/feed' %>
     </div>
   </div>
@@ -25,6 +29,6 @@
 	    This is the home page for login in the app
 	  </h2>
 
-	  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+	  <%= link_to "Sign up now!", '/users/new', class: "btn btn-lg btn-primary" %>
 	</div>
 <% end %>

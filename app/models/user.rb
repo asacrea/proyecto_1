@@ -17,6 +17,11 @@ class User < ApplicationRecord
     has_secure_password
 	validates :password, presence: true, length: { minimum: 6 }
 
+	def feed_search(search)
+    	#Micropost.where("user_id = ?", id)
+    	Micropost.where("name LIKE ?", "%#{search}%").order("created_at DESC")
+  	end
+
 	def feed
     	#Micropost.where("user_id = ?", id)
     	following_ids = "SELECT followed_id FROM relationships
@@ -24,6 +29,11 @@ class User < ApplicationRecord
     	Micropost.where("user_id IN (#{following_ids})
                      OR user_id = :user_id", user_id: id)
   	end
+
+	def search_m(search2)
+	  where("name LIKE ?", "%#{search2}%") 
+	  where("ext LIKE ?", "%#{search2}%")
+	end
 
   	# Follows a user.
 	def follow(other_user)
