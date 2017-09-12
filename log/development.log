@@ -20292,3 +20292,267 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 442ms (Views: 350.6ms | ActiveRecord: 11.5ms)
 
 
+Started GET "/?utf8=%E2%9C%93&search=dolo&commit=Search" for 127.0.0.1 at 2017-09-12 12:18:11 -0500
+  [1m[35m (57.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (35.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dolo", "commit"=>"Search"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (32.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  Rendered shared/_user_info.html.erb (38.8ms)
+  [1m[35m (46.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (147.9ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_micropost_form.html.erb (55.5ms)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (name LIKE '%dolo%')[0m
+  [1m[36mMicropost Load (1.5ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (name LIKE '%dolo%') ORDER BY `microposts`.`created_at` DESC, created_at DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendered collection of microposts/_micropost.html.erb [30 times] (599.1ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (name LIKE '%dolo%')[0m
+  Rendered shared/_feed.html.erb (617.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (950.3ms)
+  Rendered layouts/_rails_default.html.erb (1506.3ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 2933ms (Views: 2472.3ms | ActiveRecord: 195.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-09-12 12:18:21 -0500
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l3/iOGqU11rx0OQWXct6WV3BKCnJbKoEscfuk3O782cE3g+D6ArNkgA5QE+vMv5PKI0rkCIpP1zZKy+1snmFMQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 12:18:21 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_rails_default.html.erb (48.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 66.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 13:17:33 -0500
+  [1m[35m (32.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (35.4ms)
+  Rendered layouts/_rails_default.html.erb (1350.7ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 1569ms (Views: 1526.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-12 13:17:38 -0500
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (713.6ms)
+  Rendered layouts/_rails_default.html.erb (62.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (8.4ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 829ms (Views: 805.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-12 13:17:46 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ArzR5TNCYWID1H/LfPfCpBZNI4Lg8+yfor6wbCIJdeiWYzuxdwqdBElpT4LA30mq2/LEvVKdtpeN0w30gz96cA==", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'example@railstutorial.org' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 195ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 13:17:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (88.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered users/_follow_form.html.erb (1.4ms)
+  [1m[36mMicropost Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  [1m[36mMicropost Load (1.3ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 ORDER BY `microposts`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered collection of microposts/_micropost.html.erb [30 times] (19.9ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (287.4ms)
+  Rendered layouts/_rails_default.html.erb (38.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 467ms (Views: 316.1ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 13:17:54 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  Rendered shared/_user_info.html.erb (3.8ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (5.8ms)
+  Rendered shared/_error_messages.html.erb (1.3ms)
+  Rendered shared/_micropost_form.html.erb (36.5ms)
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1)[0m
+  [1m[36mMicropost Load (2.3ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered collection of microposts/_micropost.html.erb [30 times] (61.7ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (76.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (224.7ms)
+  Rendered layouts/_rails_default.html.erb (29.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 270ms (Views: 252.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 13:18:10 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.3ms)
+
+
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6380 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 13:20:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (18.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered users/_follow_form.html.erb (2.4ms)
+  [1m[36mMicropost Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 ORDER BY `microposts`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  Rendered collection of microposts/_micropost.html.erb [30 times] (32.6ms)
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (79.4ms)
+  Rendered layouts/_rails_default.html.erb (63.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 164ms (Views: 147.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 13:20:16 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6380 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 13:25:36 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.4ms)
+
+
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:26379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 13:36:12 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:26379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'

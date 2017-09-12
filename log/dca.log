@@ -1,0 +1,445 @@
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:33:59 -0500
+Processing by StaticPagesController#home as HTML
+Completed 500 Internal Server Error in 305ms
+  
+ActiveRecord::AdapterNotSpecified ('dca' database is not configured. Available: ["default", "development", "test", "production"]):
+  
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/session_helper.rb:21:in `current_user'
+app/helpers/session_helper.rb:26:in `logged_in?'
+app/controllers/static_pages_controller.rb:7:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:35:14 -0500
+  
+ActiveRecord::AdapterNotSpecified ('dca' database is not configured. Available: ["default", "development", "test", "production"]):
+  
+activerecord (5.1.2) lib/active_record/connection_adapters/connection_specification.rb:246:in `resolve_symbol_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/connection_specification.rb:227:in `resolve_connection'
+activerecord (5.1.2) lib/active_record/connection_adapters/connection_specification.rb:141:in `resolve'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:55:in `establish_connection'
+activerecord (5.1.2) lib/active_record/railtie.rb:124:in `block (2 levels) in <class:Railtie>'
+activesupport (5.1.2) lib/active_support/lazy_load_hooks.rb:45:in `instance_eval'
+activesupport (5.1.2) lib/active_support/lazy_load_hooks.rb:45:in `execute_hook'
+activesupport (5.1.2) lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+activesupport (5.1.2) lib/active_support/lazy_load_hooks.rb:51:in `each'
+activesupport (5.1.2) lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+activerecord (5.1.2) lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+activerecord (5.1.2) lib/active_record/base.rb:25:in `<top (required)>'
+activesupport (5.1.2) lib/active_support/dependencies.rb:292:in `require'
+activesupport (5.1.2) lib/active_support/dependencies.rb:292:in `block in require'
+activesupport (5.1.2) lib/active_support/dependencies.rb:258:in `load_dependency'
+activesupport (5.1.2) lib/active_support/dependencies.rb:292:in `require'
+activerecord (5.1.2) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:36:13 -0500
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:930:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:38:21 -0500
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:930:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:39:46 -0500
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+activerecord (5.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:930:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.2) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (3.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT GET_LOCK(1311764320452258960, 0)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (9.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'dca', `updated_at` = '2017-09-12 21:42:03' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (30.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(1311764320452258960)[0m
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (10.8ms)[0m  [1m[35mSHOW CREATE TABLE `microposts`[0m
+  [1m[35m (11.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'microposts'[0m
+  [1m[35m (10.9ms)[0m  [1m[35mSHOW CREATE TABLE `relationships`[0m
+  [1m[35m (10.7ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (10.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:42:26 -0500
+  [1m[35m (11.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (11.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 34.3ms)
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:26379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:45:21 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35m (4.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 26.9ms)
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:26379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:46:14 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.4ms)
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:26379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:46:32 -0500
+  [1m[35m (16.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 59.6ms)
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:26379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:13:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:48:16 -0500
+  [1m[35m (5.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 6.9ms)
+  
+Redis::CannotConnectError (Error connecting to Redis on 10.131.137.183:6379 (Errno::ECONNREFUSED)):
+  
+app/controllers/static_pages_controller.rb:15:in `home'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:55:05 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  Rendered shared/_user_info.html.erb (11.8ms)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (131.9ms)
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered shared/_micropost_form.html.erb (64.4ms)
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (7.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (260.6ms)
+  Rendered layouts/_rails_default.html.erb (10262.4ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[36mMicropost Load (5.2ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m
+  [1m[36mCACHE Micropost Load (0.1ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.1ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  Rendered layouts/_header.html.erb (359.8ms)
+Completed 500 Internal Server Error in 11238ms (ActiveRecord: 22.5ms)
+  
+ActionView::Template::Error (undefined local variable or method `console' for #<#<Class:0x007f899407f718>:0x007f899407d8a0>
+Did you mean?  controller):
+    1: <% console %>
+    2: <header class="navbar navbar-fixed-top navbar-inverse">
+    3:   <div class="container">
+    4:     <%= link_to "MetaData APP", '#', id: "logo" %>
+  
+app/views/layouts/_header.html.erb:1:in `_app_views_layouts__header_html_erb___2874137360568210050_70114453219720'
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1533961694863827688_70114435429660'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:56:10 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  Rendered shared/_user_info.html.erb (15.1ms)
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (23.1ms)
+  Rendered shared/_error_messages.html.erb (1.8ms)
+  Rendered shared/_micropost_form.html.erb (6.8ms)
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (6.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (59.2ms)
+  Rendered layouts/_rails_default.html.erb (60.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mMicropost Load (6.5ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m
+  [1m[36mCACHE Micropost Load (0.1ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  [1m[36mCACHE Micropost Load (0.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1) ORDER BY `microposts`.`created_at` DESC LIMIT 11 OFFSET 0[0m  [["LIMIT", 11], ["OFFSET", 0]]
+  Rendered layouts/_header.html.erb (379.1ms)
+Completed 500 Internal Server Error in 561ms (ActiveRecord: 40.7ms)
+  
+ActionView::Template::Error (undefined local variable or method `console' for #<#<Class:0x007f899407f718>:0x007f898d136d98>
+Did you mean?  controller):
+    1: <!--<% console %>-->
+    2: <header class="navbar navbar-fixed-top navbar-inverse">
+    3:   <div class="container">
+    4:     <%= link_to "MetaData APP", '#', id: "logo" %>
+  
+app/views/layouts/_header.html.erb:1:in `_app_views_layouts__header_html_erb___2874137360568210050_70114455410220'
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1533961694863827688_70114377099020'
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:56:20 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  Rendered shared/_user_info.html.erb (9.1ms)
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (17.6ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_micropost_form.html.erb (4.8ms)
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (8.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (47.7ms)
+  Rendered layouts/_rails_default.html.erb (86.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 191ms (Views: 127.3ms | ActiveRecord: 21.5ms)
+Started DELETE "/logout" for 127.0.0.1 at 2017-09-12 16:56:34 -0500
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZFWXBDOJGesiclvlYZAEuoLhMV3P6Re9q2ApXkAgJKD39Hq/sRcDI9Ob/7yTaYCs960y5CSsguXDjOh4geJS9g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:56:34 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_rails_default.html.erb (65.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 112ms (Views: 77.5ms | ActiveRecord: 3.0ms)
+Started GET "/login" for 127.0.0.1 at 2017-09-12 16:56:36 -0500
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (435.6ms)
+  Rendered layouts/_rails_default.html.erb (59.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (14.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 561ms (Views: 518.6ms | ActiveRecord: 6.3ms)
+Started POST "/login" for 127.0.0.1 at 2017-09-12 16:56:43 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JopnELb+/nm5yjICt2bWVFzMAhZUKinGPRSaN/RIFDqyVY1E8rYCH/N3AksLTl1akXPlKeZEc84SeSevVX4bog==", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'example@railstutorial.org' LIMIT 1[0m
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_rails_default.html.erb (54.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 68.9ms | ActiveRecord: 6.6ms)
+Started POST "/login" for 127.0.0.1 at 2017-09-12 16:57:03 -0500
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gs5Y0KML2ON6kRt519O1SnGckHldoa70s541MDDcWRKJb7VrIZXCK4t4vyAlKjFcBNCTwLbkO6zbcvQW8R4vRA==", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 111ms (ActiveRecord: 9.6ms)
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 16:57:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (35.2ms)
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered users/_follow_form.html.erb (1.4ms)
+  [1m[36mMicropost Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM `microposts` WHERE `microposts`.`user_id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (101.0ms)
+  Rendered layouts/_rails_default.html.erb (81.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 243ms (Views: 156.3ms | ActiveRecord: 45.4ms)
+Started GET "/" for 127.0.0.1 at 2017-09-12 16:57:29 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 1[0m
+  Rendered shared/_user_info.html.erb (7.9ms)
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1[0m
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+  Rendered shared/_stats.html.erb (23.6ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_micropost_form.html.erb (2.2ms)
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE (user_id IN (SELECT followed_id FROM relationships
+                     WHERE  follower_id = 1)
+                     OR user_id = 1)[0m
+  Rendered shared/_feed.html.erb (10.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (47.1ms)
+  Rendered layouts/_rails_default.html.erb (32.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 166ms (Views: 49.4ms | ActiveRecord: 40.8ms)

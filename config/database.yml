@@ -11,6 +11,15 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
+dca:
+  adapter:            mysql2
+  host:               <%= Diplomat::Service.get('mysql').Address %>
+  database:           <%= Diplomat::Kv.get('db/credentials/database') %>
+  username:           <%= Diplomat::Kv.get('db/credentials/user') %>
+  password:           <%= Diplomat::Kv.get('db/credentials/password') %>  
+  port:               <%= Diplomat::Service.get('mysql').ServicePort %>
+  pool:               5
+
 development:
   <<: *default
   database: mydatabase
