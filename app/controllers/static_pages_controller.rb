@@ -8,8 +8,12 @@ class StaticPagesController < ApplicationController
   	redis = Redis.new(host: hostname, port: port, db: 0)
   	@micropost  = current_user.microposts.build if logged_in?
   	if params[:search]
-    	@feed_items = current_user.feed_search(params[:search]).paginate(page: params[:page]) if logged_in?
-    	redis.set "users", @feed_items
+  		if !@redisVar 
+    		@feed_items = current_user.feed_search(params[:search]).paginate(page: params[:page]) if logged_in?
+    		@redisVar = redis.set "users", @feed_items
+    	else
+    		
+    	end
   	else
     	@feed_items = current_user.feed.paginate(page: params[:page]) if logged_in?
     	redis.set "users", @feed_items
