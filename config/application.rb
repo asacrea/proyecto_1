@@ -20,6 +20,9 @@ module Proyecto11
 		host = ENV["CONSUL_HOST"]
 		port = ENV["CONSUL_PORT"]
 
+		puts "CONSUL_HOST=#{host}"
+		puts "CONSUL_PORT=#{port}"
+
 		if host.to_s.empty?
 		  host = "localhost"
 		end
@@ -35,6 +38,9 @@ module Proyecto11
     
     hostname = Diplomat::Service.get('redis').Address
     port = Diplomat::Service.get('redis').ServicePort
+
+    puts "consul hostname= #{hostname}"
+    puts "consul port= #{port}"
 
 	config.cache_store = :redis_store, "redis://#{hostname}:#{port}/0/cache", { expires_in: 90.minutes }
 	
