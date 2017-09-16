@@ -231,7 +231,7 @@ Aparecerá una ventana en donde prodremos empezar a interactuar con el software.
   
   Dirección IP 200.12.180.86
   Usuario: user1
-  Contraseña: eafit.2016
+  Contraseña: ******
   
 ###Validamos la ruta donde estamos ubicados
   
@@ -256,7 +256,8 @@ Aparecerá una ventana en donde prodremos empezar a interactuar con el software.
 ###Debido a que con el usuario que ingresamos no nos deja crear la carpeta donde vamos alojar el certificado que vamos a crear, ingresamos con el usuario de administrador
   
   Usurario: su
-  Contraseña: eafit.2016
+  Contraseña: ******
+  
   
 ###Como Ingresamos con el usuario rut, podemos crear la carpeta donde alojaremos el certificado
   
